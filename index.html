@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TNET App</title>
+
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <!-- STYLE -->
+  <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+
+  <!-- TOP HEADER -->
+  <header class="topbar">
+    <div class="logo">
+      <i class="fa-solid fa-bolt"></i>
+      <span>TNET</span>
+    </div>
+
+    <div class="status">
+      <i class="fa-solid fa-circle"></i>
+      <span>Online</span>
+    </div>
+  </header>
+
+  <!-- MAIN APP VIEW (SPA RENDER TARGET) -->
+  <main id="app">
+    <!-- Dynamic pages load here -->
+  </main>
+
+  <!-- BOTTOM NAVIGATION -->
+  <nav class="navbar">
+
+    <button onclick="navigate('home')">
+      <i class="fa-solid fa-house"></i>
+      <span>Home</span>
+    </button>
+
+    <button onclick="navigate('scan')">
+      <i class="fa-solid fa-camera"></i>
+      <span>Scan</span>
+    </button>
+
+    <button onclick="navigate('feed')">
+      <i class="fa-solid fa-rss"></i>
+      <span>Feed</span>
+    </button>
+
+    <button onclick="navigate('analysis')">
+      <i class="fa-solid fa-chart-line"></i>
+      <span>Analysis</span>
+    </button>
+
+    <button onclick="navigate('profile')">
+      <i class="fa-solid fa-user"></i>
+      <span>Profile</span>
+    </button>
+
+  </nav>
+
+  <!-- SCRIPT -->
+  <script src="script.js"></script>
+</body>
+</html>
