@@ -1,0 +1,23 @@
+name: Automated Scan
+on:
+  push:
+    paths:
+      - 'uploads/**' # Inajiwasha tu picha mpya ikipakiwa
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run Scan
+        run: node scan.js
+        env:
+          SIGHTENGINE_USER: ${{ secrets.SIGHTENGINE_USER }}
+          SIGHTENGINE_SECRET: ${{ secrets.SIGHTENGINE_SECRET }}
+      - name: Commit Results
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add results/result.json
+          git commit -m "Add scan results"
+          git push
