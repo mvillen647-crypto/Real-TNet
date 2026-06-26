@@ -1,0 +1,10 @@
+{
+  "name": "tnet-app",
+  "version": "1.0.0",
+  "dependencies": {
+    "node-fetch": "^2.6.7",
+    "form-data": "^4.0.0",
+    "cloudinary": "^1.37.0",
+    "firebase-admin": "^11.11.1"
+  }
+}
